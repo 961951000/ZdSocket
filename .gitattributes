@@ -63,8 +63,8 @@
 #*.RTF   diff=astextplain
 
 ###############################################################################
-#将.js、css、html当作Scala语言来统计
+#将.js、css、html当作C#语言来统计
 ###############################################################################
-*.js linguist-language=Scala
-*.css linguist-language=Scala
-*.html linguist-language=Scala
+*.js linguist-language=C#
+*.css linguist-language=C#
+*.html linguist-language=C#
