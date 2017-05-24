@@ -61,3 +61,10 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+###############################################################################
+#将.js、css、html当作Scala语言来统计
+###############################################################################
+*.js linguist-language=Scala
+*.css linguist-language=Scala
+*.html linguist-language=Scala
