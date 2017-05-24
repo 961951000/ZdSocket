@@ -1,0 +1,49 @@
+﻿.key {
+    display: -moz-inline-box;
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+table {
+    height: 80%;
+    width: 80%; /*  必须设置一个宽度， margin: 0 auto才能使之居于父组件中央*/
+    margin: 10px auto; /*  通过设置外边距（margin）中的左右外边距属性为auto使之居于父组件（body）中间*/
+}
+
+    table tr {
+        height: 40px;
+        width: 100%;
+    }
+
+caption {
+    padding-left: 44.25%;
+    font-size: 30px;
+}
+
+th {
+    text-align: center;
+    background-color: thistle;
+    border: ridge;
+}
+
+#m1 td {
+    text-align: center;
+    border: ridge;
+}
+
+
+#m2 td {
+    padding-left: 100px;
+    border: ridge;
+}
+
+#m3 td {
+    text-align: center;
+    border: ridge;
+}
+
+.select_node {
+    margin-left: 80%;
+    margin-top: 10px;
+}
