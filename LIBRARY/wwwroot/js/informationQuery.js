@@ -61,7 +61,7 @@ function showDataM2(url) {
         //删除已有表格
         $("table tbody").empty();
         json = $.parseJSON(jsonObject);
-        if (json.pc == 1) {
+        if (json.pc === 1) {
             $("#m2_before").hide();
         } else {
             $("#m2_before").show();
@@ -93,9 +93,11 @@ function showDataM2(url) {
                 var position = $("<td>");
                 position.text(value.position);
                 var phone = $("<td>");
-                phone.text(value.phone);
+				phone.text(value.phone);
+				var classify = $("<td>");
+				classify.text(value.classify);
                 var clientName = $("<td>");
-                clientName.text(value.clientName);
+				clientName.text(value.clientName);
                 var qq = $("<td>");
                 qq.text(value.qq);
                 var fax = $("<td>");
@@ -104,7 +106,7 @@ function showDataM2(url) {
                 email.text(value.email);
                 var select = "<td><input type='hidden' id='hidden_name' value='" + value.name + "'/><input type='hidden' id='hidden_birthday' value='" + value.birthday + "'/><input type='hidden' id='hidden_position' value='" + value.position + "'/><input type='hidden' id='hidden_zip' value='" + value.zip + "'/><input type='hidden' id='hidden_phone' value='" + value.phone + "'/><input type='hidden' id='hidden_email' value='" + value.email + "'/><input type='hidden' id='hidden_qq' value='" + value.qq + "'/><input type='hidden' id='hidden_fax' value='" + value.fax + "'/><input type='hidden' id='hidden_img' value='" + value.img + "'/><input type='hidden' id='hidden_operateTime' value='" + value.operateTime + "'/><input type='hidden' id='hidden_clientName' value='" + value.clientName + "'/><input type='hidden' id='hidden_clientAddress' value='" + value.clientAddress + "'/><input type='hidden' id='hidden_clientPhone' value='" + value.clientPhone + "'/><input type='hidden' id='hidden_clientBusiness' value='" + value.clientBusiness + "'/><input type='hidden' id='hidden_clientUrl' value='" + value.clientUrl + "'/><input type='hidden' id='hidden_nature' value='" + value.nature + "'/><input type='hidden' id='hidden_classify' value='" + value.classify + "'/><input type='hidden' id='hidden_legalPerson' value='" + value.legalPerson + "'/><input type='hidden' id='hidden_phoneShow' value='" + value.phoneShow + "'/><input type='hidden' id='hidden_positionShow' value='" + value.positionShow + "'/><a class='m2_queryAllBtn' href='#'>详细</a></td>";
                 var tr = $("<tr>");
-                tr.append(id).append(name).append(position).append(phone).append(clientName).append(qq).append(fax).append(email).append(select);
+				tr.append(id).append(name).append(position).append(phone).append(classify).append(clientName).append(qq).append(fax).append(email).append(select);
                 $("#m2_infoTab").append(tr);
                 //详细
                 $(".m2_queryAllBtn").unbind("click").click(function () {

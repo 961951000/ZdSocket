@@ -149,7 +149,7 @@ function showDataM3(url) {
                 var id = $("<td>");
                 id.text((json.pc - 1) * json.ps + n + 1);
                 var name = $("<td>");
-                name.text(value.name);
+				name.text(value.name);
                 var clientName = $("<td>");
                 clientName.text(value.clientName);
                 var clientBusiness = $("<td>");
@@ -162,7 +162,7 @@ function showDataM3(url) {
                 operateTime.text(value.operateTime);
                 var select = "<td><input type='checkbox' name='id' class='selected_node' value='" + value.id + "'/>";
                 var tr = $("<tr>");
-                tr.append(id).append(name).append(clientName).append(clientBusiness).append(position).append(email).append(operateTime).append(select);
+				tr.append(id).append(name).append(clientName).append(clientBusiness).append(position).append(email).append(operateTime).append(select);
                 $("#m3_infoTab").append(tr);
             });
         }

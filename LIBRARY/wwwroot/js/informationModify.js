@@ -117,7 +117,9 @@ function showDataM1(url) {
                 var position = $("<td>");
                 position.text(value.position);
                 var phone = $("<td>");
-                phone.text(value.phone);
+				phone.text(value.phone);
+				var classify = $("<td>");
+				classify.text(value.classify);
                 var clientName = $("<td>");
                 clientName.text(value.clientName);
                 var qq = $("<td>");
@@ -128,7 +130,7 @@ function showDataM1(url) {
                 email.text(value.email);
                 var modify = "<td><input type='hidden' id='hidden_id' value='" + value.id + "'/><input type='hidden' id='hidden_name' value='" + value.name + "'/><input type='hidden' id='hidden_birthday' value='" + value.birthday + "'/><input type='hidden' id='hidden_position' value='" + value.position + "'/><input type='hidden' id='hidden_zip' value='" + value.zip + "'/><input type='hidden' id='hidden_phone' value='" + value.phone + "'/><input type='hidden' id='hidden_email' value='" + value.email + "'/><input type='hidden' id='hidden_qq' value='" + value.qq + "'/><input type='hidden' id='hidden_fax' value='" + value.fax + "'/><input type='hidden' id='hidden_img' value='" + value.img + "'/><input type='hidden' id='hidden_operateTime' value='" + value.operateTime + "'/><input type='hidden' id='hidden_clientName' value='" + value.clientName + "'/><input type='hidden' id='hidden_clientAddress' value='" + value.clientAddress + "'/><input type='hidden' id='hidden_clientPhone' value='" + value.clientPhone + "'/><input type='hidden' id='hidden_clientBusiness' value='" + value.clientBusiness + "'/><input type='hidden' id='hidden_clientUrl' value='" + value.clientUrl + "'/><input type='hidden' id='hidden_nature' value='" + value.nature + "'/><input type='hidden' id='hidden_classify' value='" + value.classify + "'/><input type='hidden' id='hidden_legalPerson' value='" + value.legalPerson + "'/><input type='hidden' id='hidden_phoneShow' value='" + value.phoneShow + "'/><input type='hidden' id='hidden_positionShow' value='" + value.positionShow + "'/><a class='m1_modifyBtn' href='#'>修改</a>&nbsp;&nbsp;&nbsp;<a class='m1_delSureBtn' href='#'>删除</a></td>";
                 var tr = $("<tr>");
-                tr.append(id).append(name).append(position).append(phone).append(clientName).append(qq).append(fax).append(email).append(modify);
+				tr.append(id).append(name).append(position).append(phone).append(classify).append(clientName).append(qq).append(fax).append(email).append(modify);
                 $("#m1_infoTab").append(tr);
                 //修改
                 $(".m1_modifyBtn").unbind("click").click(function () {
